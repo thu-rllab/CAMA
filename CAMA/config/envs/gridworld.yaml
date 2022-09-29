@@ -1,0 +1,24 @@
+env: catch
+
+env_args:
+  entity_scheme: True
+  n_agents: 2
+  episode_limit: 50
+  size_x: 11
+  n_wall: 2
+  size_y: 11
+  transparent_wall: False
+  sr: 3
+  fence_len: 4
+  coord_reward: 10
+  single_reward: 1
+  full_observe: False
+  all_agents_observe: False
+  raw_state: True
+
+test_nepisode: 160
+test_interval: 50000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 4000000  

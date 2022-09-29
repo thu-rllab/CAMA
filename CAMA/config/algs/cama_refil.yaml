@@ -1,0 +1,65 @@
+# --- QMIX specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 500000
+
+runner: "parallel"
+batch_size_run: 8
+training_iters: 8
+
+entity_last_action: True # Include the user-controlled agents' last actions (one_hot) in their entities
+
+buffer_size: 5000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+# use the Q_Learner to train
+agent_output_type: "q"
+learner: "icm_q_learner"
+double_q: True
+mixer: "flex_qmix"
+mixing_embed_dim: 32
+hypernet_embed: 128
+softmax_mixing_weights: True
+agent: "imagine_entity_attend_rnn_icm"
+rnn_hidden_dim: 64
+mac: "icm_mac"
+attn_embed_dim: 128
+attn_n_heads: 4
+lmbda: 0.5
+ce_weight: 0.005
+double_attn: False
+no_msg: False
+mi_message: True
+msg_dim: 10
+ia_weight: 0.01
+ib_weight: 0.01
+add_q: True
+club_mi: True
+club_ratio: 5 #times of maximize log q: times of minimize MI
+logq_weight: 0.1
+entropy_weight: 0.001
+beta: 0.7
+club_weight: 0.1
+q_weight: 1.0
+
+rnn_message: False
+limit_msg: True #limit the mean of msg in [-1,1]
+s_i_share_attn: True
+
+sp_use_same_attn: True
+reserve_ori_f: False
+group: "random"
+
+global_icm: False
+gce_weight: 0.005
+
+run: "icm"
+save_entities_and_msg: False
+rank_percent: 0.8
+
+name: "icm_refil"

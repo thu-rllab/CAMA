@@ -1,5 +1,5 @@
 # CAMA
-Code for ICML2023 submission: Concentrated Attention for Multi-Agent Reinforcement Learning.
+Code for ICML2023 accepted paper: Complementary Attention for Multi-Agent Reinforcement Learning.
 
 This codebase is built on top of the [PyMARL](https://github.com/oxwhirl/pymarl) framework and the codebase of [REFIL](https://github.com/shariqiqbal2810/REFIL) algorithm. Thanks for [Shariq Iqbal](https://github.com/shariqiqbal2810) for sharing his code.
 
